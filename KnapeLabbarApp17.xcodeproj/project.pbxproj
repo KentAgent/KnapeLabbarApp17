@@ -7,25 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D24A83212014C16C0079ADF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83202014C16C0079ADF3 /* AppDelegate.m */; };
-		D24A83242014C16C0079ADF3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83232014C16C0079ADF3 /* ViewController.m */; };
-		D24A83272014C16C0079ADF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24A83252014C16C0079ADF3 /* Main.storyboard */; };
-		D24A83292014C16C0079ADF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24A83282014C16C0079ADF3 /* Assets.xcassets */; };
-		D24A832C2014C16C0079ADF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24A832A2014C16C0079ADF3 /* LaunchScreen.storyboard */; };
-		D24A832F2014C16C0079ADF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A832E2014C16C0079ADF3 /* main.m */; };
+		D24A83782014C3870079ADF3 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D24A83632014C3860079ADF3 /* Base.lproj */; };
+		D24A837A2014C3870079ADF3 /* ChooseGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83672014C3860079ADF3 /* ChooseGameViewController.m */; };
+		D24A837B2014C3870079ADF3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83682014C3860079ADF3 /* ViewController.m */; };
+		D24A837C2014C3870079ADF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A836A2014C3860079ADF3 /* main.m */; };
+		D24A837D2014C3870079ADF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24A836B2014C3860079ADF3 /* Assets.xcassets */; };
+		D24A837E2014C3870079ADF3 /* HemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A836D2014C3870079ADF3 /* HemViewController.m */; };
+		D24A837F2014C3870079ADF3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D24A836E2014C3870079ADF3 /* Info.plist */; };
+		D24A83822014C3870079ADF3 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83722014C3870079ADF3 /* AboutViewController.m */; };
+		D24A83832014C3870079ADF3 /* UnUsedFiles in Resources */ = {isa = PBXBuildFile; fileRef = D24A83732014C3870079ADF3 /* UnUsedFiles */; };
+		D24A83872014C4690079ADF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83852014C4680079ADF3 /* AppDelegate.m */; };
+		D24A838E2014C7550079ADF3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83882014C7530079ADF3 /* SettingsViewController.m */; };
+		D24A838F2014C7550079ADF3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83892014C7530079ADF3 /* GameViewController.m */; };
+		D24A83902014C7550079ADF3 /* SavedSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A838D2014C7550079ADF3 /* SavedSettings.m */; };
+		D24A83962014C7EE0079ADF3 /* GameSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83952014C7EE0079ADF3 /* GameSettingsViewController.m */; };
+		D24A839A2014CB250079ADF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24A83842014C4330079ADF3 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D24A831C2014C16C0079ADF3 /* KnapeLabbarApp17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnapeLabbarApp17.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D24A831F2014C16C0079ADF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D24A83202014C16C0079ADF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D24A83222014C16C0079ADF3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D24A83232014C16C0079ADF3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D24A83262014C16C0079ADF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D24A83282014C16C0079ADF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D24A832B2014C16C0079ADF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D24A832D2014C16C0079ADF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D24A832E2014C16C0079ADF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D24A83632014C3860079ADF3 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		D24A83652014C3860079ADF3 /* HemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HemViewController.h; sourceTree = "<group>"; };
+		D24A83672014C3860079ADF3 /* ChooseGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseGameViewController.m; sourceTree = "<group>"; };
+		D24A83682014C3860079ADF3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D24A836A2014C3860079ADF3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D24A836B2014C3860079ADF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D24A836C2014C3860079ADF3 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		D24A836D2014C3870079ADF3 /* HemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HemViewController.m; sourceTree = "<group>"; };
+		D24A836E2014C3870079ADF3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D24A83712014C3870079ADF3 /* ChooseGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseGameViewController.h; sourceTree = "<group>"; };
+		D24A83722014C3870079ADF3 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		D24A83732014C3870079ADF3 /* UnUsedFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UnUsedFiles; sourceTree = "<group>"; };
+		D24A83742014C3870079ADF3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D24A83842014C4330079ADF3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D24A83852014C4680079ADF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D24A83862014C4680079ADF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D24A83882014C7530079ADF3 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		D24A83892014C7530079ADF3 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		D24A838A2014C7540079ADF3 /* SavedSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SavedSettings.h; sourceTree = "<group>"; };
+		D24A838B2014C7540079ADF3 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		D24A838C2014C7550079ADF3 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		D24A838D2014C7550079ADF3 /* SavedSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SavedSettings.m; sourceTree = "<group>"; };
+		D24A83942014C7ED0079ADF3 /* GameSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameSettingsViewController.h; sourceTree = "<group>"; };
+		D24A83952014C7EE0079ADF3 /* GameSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameSettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +82,48 @@
 		D24A831E2014C16C0079ADF3 /* KnapeLabbarApp17 */ = {
 			isa = PBXGroup;
 			children = (
-				D24A831F2014C16C0079ADF3 /* AppDelegate.h */,
-				D24A83202014C16C0079ADF3 /* AppDelegate.m */,
-				D24A83222014C16C0079ADF3 /* ViewController.h */,
-				D24A83232014C16C0079ADF3 /* ViewController.m */,
-				D24A83252014C16C0079ADF3 /* Main.storyboard */,
-				D24A83282014C16C0079ADF3 /* Assets.xcassets */,
-				D24A832A2014C16C0079ADF3 /* LaunchScreen.storyboard */,
-				D24A832D2014C16C0079ADF3 /* Info.plist */,
-				D24A832E2014C16C0079ADF3 /* main.m */,
+				D24A83862014C4680079ADF3 /* AppDelegate.h */,
+				D24A83852014C4680079ADF3 /* AppDelegate.m */,
+				D24A83982014C8610079ADF3 /* Labb2FIles */,
+				D24A83972014C7FF0079ADF3 /* Labb1Files */,
+				D24A83652014C3860079ADF3 /* HemViewController.h */,
+				D24A836D2014C3870079ADF3 /* HemViewController.m */,
+				D24A83712014C3870079ADF3 /* ChooseGameViewController.h */,
+				D24A83672014C3860079ADF3 /* ChooseGameViewController.m */,
+				D24A83842014C4330079ADF3 /* Main.storyboard */,
+				D24A836A2014C3860079ADF3 /* main.m */,
+				D24A836E2014C3870079ADF3 /* Info.plist */,
+				D24A83742014C3870079ADF3 /* ViewController.h */,
+				D24A83682014C3860079ADF3 /* ViewController.m */,
+				D24A836B2014C3860079ADF3 /* Assets.xcassets */,
+				D24A83732014C3870079ADF3 /* UnUsedFiles */,
+				D24A83632014C3860079ADF3 /* Base.lproj */,
 			);
 			path = KnapeLabbarApp17;
+			sourceTree = "<group>";
+		};
+		D24A83972014C7FF0079ADF3 /* Labb1Files */ = {
+			isa = PBXGroup;
+			children = (
+				D24A83942014C7ED0079ADF3 /* GameSettingsViewController.h */,
+				D24A83952014C7EE0079ADF3 /* GameSettingsViewController.m */,
+				D24A838C2014C7550079ADF3 /* GameViewController.h */,
+				D24A83892014C7530079ADF3 /* GameViewController.m */,
+				D24A838A2014C7540079ADF3 /* SavedSettings.h */,
+				D24A838D2014C7550079ADF3 /* SavedSettings.m */,
+				D24A83882014C7530079ADF3 /* SettingsViewController.m */,
+				D24A838B2014C7540079ADF3 /* SettingsViewController.h */,
+				D24A836C2014C3860079ADF3 /* AboutViewController.h */,
+				D24A83722014C3870079ADF3 /* AboutViewController.m */,
+			);
+			name = Labb1Files;
+			sourceTree = "<group>";
+		};
+		D24A83982014C8610079ADF3 /* Labb2FIles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Labb2FIles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +184,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D24A832C2014C16C0079ADF3 /* LaunchScreen.storyboard in Resources */,
-				D24A83292014C16C0079ADF3 /* Assets.xcassets in Resources */,
-				D24A83272014C16C0079ADF3 /* Main.storyboard in Resources */,
+				D24A837F2014C3870079ADF3 /* Info.plist in Resources */,
+				D24A839A2014CB250079ADF3 /* Main.storyboard in Resources */,
+				D24A83832014C3870079ADF3 /* UnUsedFiles in Resources */,
+				D24A83782014C3870079ADF3 /* Base.lproj in Resources */,
+				D24A837D2014C3870079ADF3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,32 +199,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D24A83242014C16C0079ADF3 /* ViewController.m in Sources */,
-				D24A832F2014C16C0079ADF3 /* main.m in Sources */,
-				D24A83212014C16C0079ADF3 /* AppDelegate.m in Sources */,
+				D24A838F2014C7550079ADF3 /* GameViewController.m in Sources */,
+				D24A83962014C7EE0079ADF3 /* GameSettingsViewController.m in Sources */,
+				D24A83822014C3870079ADF3 /* AboutViewController.m in Sources */,
+				D24A837E2014C3870079ADF3 /* HemViewController.m in Sources */,
+				D24A83902014C7550079ADF3 /* SavedSettings.m in Sources */,
+				D24A83872014C4690079ADF3 /* AppDelegate.m in Sources */,
+				D24A837A2014C3870079ADF3 /* ChooseGameViewController.m in Sources */,
+				D24A837C2014C3870079ADF3 /* main.m in Sources */,
+				D24A837B2014C3870079ADF3 /* ViewController.m in Sources */,
+				D24A838E2014C7550079ADF3 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D24A83252014C16C0079ADF3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D24A83262014C16C0079ADF3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D24A832A2014C16C0079ADF3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D24A832B2014C16C0079ADF3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D24A83302014C16C0079ADF3 /* Debug */ = {
@@ -218,7 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -278,12 +323,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8427K5Y5BA;
 				INFOPLIST_FILE = KnapeLabbarApp17/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KK.KnapeLabbarApp17;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -292,12 +339,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8427K5Y5BA;
 				INFOPLIST_FILE = KnapeLabbarApp17/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KK.KnapeLabbarApp17;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
