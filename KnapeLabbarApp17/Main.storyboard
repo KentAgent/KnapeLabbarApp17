@@ -248,7 +248,7 @@
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KEW-P1-leT" kind="show" id="vLV-oP-XOl"/>
+                                    <segue destination="0CF-nO-2ph" kind="show" id="ncL-M3-5YA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -391,7 +391,47 @@ Ett stort intresse av att möta nya människor samt utmana mig själv genom att 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeF-GP-U7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1903" y="1565"/>
+            <point key="canvasLocation" x="-1881" y="1565"/>
+        </scene>
+        <!--Quiz Game Hem View Controller-->
+        <scene sceneID="9uz-ID-GvN">
+            <objects>
+                <viewController id="0CF-nO-2ph" customClass="QuizGameHemViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1mp-tG-Vdz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myc-9J-3KG">
+                                <rect key="frame" x="142" y="187" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start game"/>
+                                <connections>
+                                    <segue destination="KEW-P1-leT" kind="show" id="YLE-e4-78h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQS-am-dHZ">
+                                <rect key="frame" x="142" y="225" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-GI-8mp">
+                                <rect key="frame" x="142" y="263" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Highscore"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="32s-Zs-LQO"/>
+                    </view>
+                    <connections>
+                        <outlet property="highscoreQuizButton" destination="bcc-GI-8mp" id="iIA-Hp-Y0U"/>
+                        <outlet property="playQuizButton" destination="Myc-9J-3KG" id="Fak-Fi-XAf"/>
+                        <outlet property="settingsQuizButton" destination="eQS-am-dHZ" id="UC3-pQ-2Yy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJT-7g-Az7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1206" y="1565"/>
         </scene>
         <!--Game settings-->
         <scene sceneID="nfZ-aW-7wJ">
@@ -529,7 +569,7 @@ Ett stort intresse av att möta nya människor samt utmana mig själv genom att 
         <!--QuizGame-->
         <scene sceneID="0bD-n5-FH6">
             <objects>
-                <viewController title="Quiz game" id="KEW-P1-leT" userLabel="QuizGame" sceneMemberID="viewController">
+                <viewController title="Quiz game" id="KEW-P1-leT" userLabel="QuizGame" customClass="QuizGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wVd-u6-Z87" userLabel="Quizz game">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -548,13 +588,6 @@ Ett stort intresse av att möta nya människor samt utmana mig själv genom att 
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3t-qj-EiI" userLabel="right or false label">
-                                <rect key="frame" x="149" y="326" width="76" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y53-op-qXL" userLabel="Answere 1">
                                 <rect key="frame" x="46" y="380" width="137" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -584,6 +617,9 @@ Ett stort intresse av att möta nya människor samt utmana mig själv genom att 
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answere2Pressed:" destination="KEW-P1-leT" eventType="touchUpInside" id="V67-ol-5DB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7Q-ZR-Sbl" userLabel="Answere 3">
                                 <rect key="frame" x="46" y="456" width="137" height="68"/>
@@ -599,6 +635,9 @@ Ett stort intresse av att möta nya människor samt utmana mig själv genom att 
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answere3Pressed:" destination="KEW-P1-leT" eventType="touchUpInside" id="COX-rI-YMS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pA5-bG-gk9" userLabel="Answere 4">
                                 <rect key="frame" x="191" y="456" width="137" height="68"/>
@@ -614,6 +653,9 @@ Ett stort intresse av att möta nya människor samt utmana mig själv genom att 
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answere4Pressed:" destination="KEW-P1-leT" eventType="touchUpInside" id="wqr-8u-j9G"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-Lx-0Vy" userLabel="New question">
                                 <rect key="frame" x="119" y="579" width="137" height="68"/>
@@ -629,6 +671,9 @@ Ett stort intresse av att möta nya människor samt utmana mig själv genom att 
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="newQuestion:" destination="KEW-P1-leT" eventType="touchUpInside" id="p8d-Na-bde"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answere the following question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDv-Ko-kpl">
                                 <rect key="frame" x="16" y="89" width="343" height="48"/>
@@ -637,14 +682,48 @@ Ett stort intresse av att möta nya människor samt utmana mig själv genom att 
                                 <color key="textColor" red="0.20784313730000001" green="0.67450980390000004" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hej" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3t-qj-EiI" userLabel="right or false label">
+                                <rect key="frame" x="149" y="326" width="76" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRJ-vQ-1QE" userLabel="Answere 1">
+                                <rect key="frame" x="46" y="380" width="137" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.67450980390000004" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <state key="normal" title="Answere 1">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answere1Pressed:" destination="KEW-P1-leT" eventType="touchUpInside" id="Ulj-VR-tLi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="IMm-hm-MIi"/>
                     </view>
+                    <connections>
+                        <outlet property="anotherQuestionButton" destination="w6Y-Lx-0Vy" id="ntz-1w-prr"/>
+                        <outlet property="answere1Button" destination="y53-op-qXL" id="BNc-vj-6h6"/>
+                        <outlet property="answere2Button" destination="A4G-y7-xoa" id="04B-t6-6zk"/>
+                        <outlet property="answere3Button" destination="K7Q-ZR-Sbl" id="QWg-Ej-QZt"/>
+                        <outlet property="answere4Button" destination="pA5-bG-gk9" id="fI2-ep-MFy"/>
+                        <outlet property="correctOrInctorrectLabel" destination="L3t-qj-EiI" id="OJ5-eF-HKW"/>
+                        <outlet property="questionLabel" destination="hND-cJ-V4A" id="EfP-Cd-reB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkK-VI-K2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1175" y="1565"/>
+            <point key="canvasLocation" x="-1207" y="2278"/>
         </scene>
     </scenes>
     <resources>

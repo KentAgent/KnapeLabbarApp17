@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Questions</key>
+	<array>
+		<dict>
+			<key>questionText</key>
+			<string>Vad heter du?</string>
+			<key>a1</key>
+			<string>kalle</string>
+			<key>a2</key>
+			<string>koffe</string>
+			<key>a3</key>
+			<string>lars</string>
+			<key>a4</key>
+			<string>robert</string>
+			<key>correctAnswere</key>
+			<string>koffe</string>
+		</dict>
+		<dict>
+			<key>questionText</key>
+			<string>Vad heter jag?</string>
+			<key>a1</key>
+			<string>adam</string>
+			<key>a2</key>
+			<string>per</string>
+			<key>a3</key>
+			<string>nippe</string>
+			<key>a4</key>
+			<string>mamma</string>
+			<key>correctAnswere</key>
+			<string>mamma</string>
+		</dict>
+		<dict>
+			<key>questionText</key>
+			<string>Vad heter han?</string>
+			<key>a1</key>
+			<string>lars</string>
+			<key>a2</key>
+			<string>pippi</string>
+			<key>a3</key>
+			<string>pappa</string>
+			<key>a4</key>
+			<string>robert</string>
+			<key>correctAnswere</key>
+			<string>lars</string>
+		</dict>
+		<dict>
+			<key>questionText</key>
+			<string>Vad heter hon?</string>
+			<key>a1</key>
+			<string>kalle</string>
+			<key>a2</key>
+			<string>koffe</string>
+			<key>a3</key>
+			<string>ingmar</string>
+			<key>a4</key>
+			<string>robert</string>
+			<key>correctAnswere</key>
+			<string>robert</string>
+		</dict>
+	</array>
+</dict>
+</plist>
