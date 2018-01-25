@@ -11,7 +11,6 @@
 @interface QuizGameViewController ()
 @property NSMutableArray *questions;
 @property NSMutableArray *answers;
-@property NSProgress *progress;
 
 @end
 
@@ -32,10 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.quizGameModel = [[QuizGameModel alloc] init];
-    self.progressBar = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
     [self startGame];
-    [self generateNewQuestion];
-    //instantiate QuizGameModel
 }
 
 -(void)startGame{
@@ -47,6 +43,8 @@
 
 -(void)generateNewQuestion{
     amountOfQuestions++;
+    [self testText];
+    self.correctOrInctorrectLabel.hidden = YES;
     if (amountOfQuestions < 5) {
         [self setTextGenNewQuestion];
     } else {
@@ -61,7 +59,7 @@
         [self startGame];
         self.answer3Button.hidden = NO;
         self.answer4Button.hidden = NO;
-        [self.anotherQuestionButton setTitle:(@"New Question") forState:UIControlStateNormal];
+        [self.anotherQuestionButton setTitle:(@"") forState:UIControlStateNormal];
     }
 }
 
@@ -109,7 +107,6 @@
     [self buttonsEnabled];
     
     [self.questionLabel setText:self.quizGameModel.getQuestionLabel];
-    //[self.correctOrInctorrectLabel setText:self.quizGameModel.getAnswerLabel];
     [self.answer1Button setTitle:self.quizGameModel.getAnswer1 forState:UIControlStateNormal];
     [self.answer2Button setTitle:self.quizGameModel.getAnswer2 forState:UIControlStateNormal];
     [self.answer3Button setTitle:self.quizGameModel.getAnswer3 forState:UIControlStateNormal];
@@ -118,14 +115,16 @@
 
 -(void) correct:(BOOL) correct{
     if (correct) {
-    self.correctOrInctorrectLabel.text = @"Correct";
-        [self buttonsDisabled];
+        self.correctOrInctorrectLabel.text = @"Correct";
+        self.correctOrInctorrectLabel.hidden = NO;
         self.anotherQuestionButton.enabled = YES;
+        [self buttonsDisabled];
         [self.anotherQuestionButton setTitle:(@"New Question") forState:UIControlStateNormal];
     } else {
-    self.correctOrInctorrectLabel.text = @"Incorrect";
-        [self buttonsDisabled];
+        self.correctOrInctorrectLabel.text = @"Incorrect";
+        self.correctOrInctorrectLabel.hidden = NO;
         self.anotherQuestionButton.enabled = YES;
+        [self buttonsDisabled];
         [self.anotherQuestionButton setTitle:(@"New Question") forState:UIControlStateNormal];
     }
 }
@@ -153,12 +152,12 @@
 }
 
 -(void) afterGameTextChange{
-    [self.anotherQuestionButton setTitle:(@"Play Again") forState:UIControlStateNormal];
     NSString *correctText = [NSString stringWithFormat: @"Correct answers: %d", amountCorrectAnswers];
     NSString *incorrectText = [NSString stringWithFormat:@"Incorrect answers: %d", amountIncorrectAnwers];
-
+    [self.anotherQuestionButton setTitle:(@"Play Again") forState:UIControlStateNormal];
     [self.answer1Button setTitle:(correctText) forState:UIControlStateNormal];
     [self.answer2Button setTitle:(incorrectText) forState:UIControlStateNormal];
+    
     
     if (amountCorrectAnswers == 5){
         self.questionLabel.text = @"Daamn, you got all the right answers";
@@ -173,6 +172,17 @@
     } else{
         self.questionLabel.text =@"Just leave, and never return";
     }
+}
+
+-(void)testText{
+    NSString *amount = [NSString stringWithFormat:@"questions: %d", amountOfQuestions];
+    [self.amountOfQuestionsLabel setText:(amount)];
+    
+    NSString *correct = [NSString stringWithFormat:@"correct: %d", amountCorrectAnswers];
+    [self.correct setText:(correct)];
+    
+    NSString *incorrect = [NSString stringWithFormat:@"incorrect: %d", amountIncorrectAnwers];
+    [self.incorrect setText:(incorrect)];
 }
 
 - (void)didReceiveMemoryWarning {

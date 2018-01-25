@@ -17,7 +17,10 @@
     //amount of incorrect answeres
     int amountIncorrectAnwers;
 }
-@property (strong, nonatomic) IBOutlet UIView *progressBar;
+@property (weak, nonatomic) IBOutlet UILabel *incorrect;
+@property (weak, nonatomic) IBOutlet UILabel *amountOfQuestionsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *correct;
+
 //Labels
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *correctOrInctorrectLabel;
