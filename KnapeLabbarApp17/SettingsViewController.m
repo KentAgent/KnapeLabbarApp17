@@ -22,7 +22,6 @@
 @property float backgroundGreenAmount;
 @property float backgroundBlueAmount;
 
-
 @end
 
 //Fråga erik om global save settings
@@ -61,7 +60,6 @@
         [self.switchBackgroundBlue setOn:NO animated:NO];
     }
 }
-
 
 // Refresh color for background and text when switch is flipped
 - (IBAction)switchChanged:(id)sender {

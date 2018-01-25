@@ -21,8 +21,6 @@
 @property (nonatomic) int randomNumber;
 @property (nonatomic) int labelNumber;
 
-
-
 @end
 
 @implementation GameViewController
