@@ -9,37 +9,21 @@
 #import "QuizGameViewController.h"
 
 @interface QuizGameViewController ()
+@property NSMutableArray *questions;
+@property NSMutableArray *answers;
+@property NSProgress *progress;
 
 @end
 
 @implementation QuizGameViewController
 
-@synthesize questionLabel;
-@synthesize correctOrInctorrectLabel;
-@synthesize answere1Button;
-@synthesize answere2Button;
-@synthesize answere3Button;
-@synthesize answere4Button;
-@synthesize anotherQuestionButton;
-
-@synthesize questionList = question_;
-@synthesize answereList = answere_;
-
-- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        //Bla bla bla
-    }
-    return self;
-}
-
 - (void) viewDidUnLoad{
     [self setQuestionLabel:nil];
     [self setCorrectOrInctorrectLabel:nil];
-    [self setAnswere1Button:nil];
-    [self setAnswere2Button:nil];
-    [self setAnswere3Button:nil];
-    [self setAnswere4Button:nil];
+    [self setAnswer1Button:nil];
+    [self setAnswer2Button:nil];
+    [self setAnswer3Button:nil];
+    [self setAnswer4Button:nil];
     [self setAnotherQuestionButton:nil];
     [super viewDidLoad];
 }
@@ -47,87 +31,152 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setQuestion];
+    self.quizGameModel = [[QuizGameModel alloc] init];
+    self.progressBar = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+    [self startGame];
+    [self generateNewQuestion];
+    //instantiate QuizGameModel
 }
 
--(void)setQuestion{
-    //Loads Questions.plist
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Questions" ofType:@"plist"];
-    //Loads the array Questions
-    NSDictionary *tempDict = [[NSDictionary alloc] initWithContentsOfFile:path];
-    self.questionList = [tempDict objectForKey:@"Questions"];
-    
-    NSDictionary *newRandomQuestion = [self.questionList objectAtIndex:arc4random_uniform((int)self.questionList.count)];
-    //Set text on labels
-    [self.questionLabel setText:[newRandomQuestion objectForKey:@"questionText"]];
-    [self.correctOrInctorrectLabel setText:[newRandomQuestion objectForKey:@"correctAnswere"]];
-    //Set text on buttons
-    [self.answere1Button setTitle:[newRandomQuestion objectForKey:@"a1"] forState:UIControlStateNormal];
-    [self.answere2Button setTitle:[newRandomQuestion objectForKey:@"a2"] forState:UIControlStateNormal];
-    [self.answere3Button setTitle:[newRandomQuestion objectForKey:@"a3"] forState:UIControlStateNormal];
-    [self.answere4Button setTitle:[newRandomQuestion objectForKey:@"a4"] forState:UIControlStateNormal];
-    
-    
+-(void)startGame{
+    amountOfQuestions = -1;
+    amountCorrectAnswers = 0;
+    amountIncorrectAnwers = 0;
+    [self generateNewQuestion];
 }
-- (IBAction)answere1Pressed:(id)sender {
-    NSDictionary *newRandomQuestion = [self.questionList objectAtIndex:arc4random_uniform((int)self.questionList.count)];
-    if ([newRandomQuestion objectForKey:@"correctAnswere"] == [newRandomQuestion objectForKey:@"a1"]) {
-        self.correctOrInctorrectLabel.text = @"Correct";
+
+-(void)generateNewQuestion{
+    amountOfQuestions++;
+    if (amountOfQuestions < 5) {
+        [self setTextGenNewQuestion];
+    } else {
+        [self afterGame];
     }
-    else{
-        self.correctOrInctorrectLabel.text = @"Incorrect";
+}
+
+- (IBAction)playAgain:(id)sender {
+    if (amountOfQuestions < 5) {
+        [self generateNewQuestion];
+    }else {
+        [self startGame];
+        self.answer3Button.hidden = NO;
+        self.answer4Button.hidden = NO;
+        [self.anotherQuestionButton setTitle:(@"New Question") forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)answere1Pressed:(id)sender {
+    if ([self.quizGameModel.getAnswer1 isEqualToString:self.quizGameModel.getAnswerLabel]) {
+        [self correct:YES];
+        amountCorrectAnswers++;
+    } else {
+        [self correct:NO];
+        amountIncorrectAnwers++;
     }
 }
 - (IBAction)answere2Pressed:(id)sender {
-    NSDictionary *newRandomQuestion = [self.questionList objectAtIndex:arc4random_uniform((int)self.questionList.count)];
-    if ([newRandomQuestion objectForKey:@"correctAnswere"] == [newRandomQuestion objectForKey:@"a2"]) {
-        self.correctOrInctorrectLabel.text = @"Correct";
+    if ([self.quizGameModel.getAnswer2 isEqualToString:self.quizGameModel.getAnswerLabel]) {
+        [self correct:YES];
+        amountCorrectAnswers++;
+    } else {
+        [self correct:NO];
+        amountIncorrectAnwers++;
     }
-    else{
-        self.correctOrInctorrectLabel.text = @"Incorrect";
-    }
-    
 }
 - (IBAction)answere3Pressed:(id)sender {
-    NSDictionary *newRandomQuestion = [self.questionList objectAtIndex:arc4random_uniform((int)self.questionList.count)];
-    if ([newRandomQuestion objectForKey:@"correctAnswere"] == [newRandomQuestion objectForKey:@"a3"]) {
-        self.correctOrInctorrectLabel.text = @"Correct";
-    }
-    else{
-        self.correctOrInctorrectLabel.text = @"Incorrect";
+    if ([self.quizGameModel.getAnswer3 isEqualToString:self.quizGameModel.getAnswerLabel]) {
+        [self correct:YES];
+        amountCorrectAnswers++;
+    } else {
+        [self correct:NO];
+        amountIncorrectAnwers++;
     }
 }
 - (IBAction)answere4Pressed:(id)sender {
-    NSDictionary *newRandomQuestion = [self.questionList objectAtIndex:arc4random_uniform((int)self.questionList.count)];
-    if ([newRandomQuestion objectForKey:@"correctAnswere"] == [newRandomQuestion objectForKey:@"a4"]) {
-        self.correctOrInctorrectLabel.text = @"Correct";
-    }
-    else{
-        self.correctOrInctorrectLabel.text = @"Incorrect";
+    if ([self.quizGameModel.getAnswer4 isEqualToString:self.quizGameModel.getAnswerLabel]) {
+        [self correct:YES];
+        amountCorrectAnswers++;
+    } else {
+        [self correct:NO];
+        amountIncorrectAnwers++;
     }
 }
 
-
-
-- (IBAction)newQuestion:(id)sender {
-    [self setQuestion];
+-(void)setTextGenNewQuestion{
+    self.quizGameModel.setQuestions;
+    self.anotherQuestionButton.enabled = NO;
+    [self.anotherQuestionButton setTitle:(@"") forState:UIControlStateNormal];
+    [self buttonsEnabled];
+    
+    [self.questionLabel setText:self.quizGameModel.getQuestionLabel];
+    //[self.correctOrInctorrectLabel setText:self.quizGameModel.getAnswerLabel];
+    [self.answer1Button setTitle:self.quizGameModel.getAnswer1 forState:UIControlStateNormal];
+    [self.answer2Button setTitle:self.quizGameModel.getAnswer2 forState:UIControlStateNormal];
+    [self.answer3Button setTitle:self.quizGameModel.getAnswer3 forState:UIControlStateNormal];
+    [self.answer4Button setTitle:self.quizGameModel.getAnswer4 forState:UIControlStateNormal];
 }
 
+-(void) correct:(BOOL) correct{
+    if (correct) {
+    self.correctOrInctorrectLabel.text = @"Correct";
+        [self buttonsDisabled];
+        self.anotherQuestionButton.enabled = YES;
+        [self.anotherQuestionButton setTitle:(@"New Question") forState:UIControlStateNormal];
+    } else {
+    self.correctOrInctorrectLabel.text = @"Incorrect";
+        [self buttonsDisabled];
+        self.anotherQuestionButton.enabled = YES;
+        [self.anotherQuestionButton setTitle:(@"New Question") forState:UIControlStateNormal];
+    }
+}
 
+-(void) buttonsEnabled {
+    self.answer1Button.enabled = YES;
+    self.answer2Button.enabled = YES;
+    self.answer3Button.enabled = YES;
+    self.answer4Button.enabled = YES;
+}
+
+-(void) buttonsDisabled {
+    self.answer1Button.enabled = NO;
+    self.answer2Button.enabled = NO;
+    self.answer3Button.enabled = NO;
+    self.answer4Button.enabled = NO;
+}
+
+-(void)afterGame{
+    [self buttonsDisabled];
+    self.correctOrInctorrectLabel.hidden = YES;
+    self.answer3Button.hidden = YES;
+    self.answer4Button.hidden = YES;
+    [self afterGameTextChange];
+}
+
+-(void) afterGameTextChange{
+    [self.anotherQuestionButton setTitle:(@"Play Again") forState:UIControlStateNormal];
+    NSString *correctText = [NSString stringWithFormat: @"Correct answers: %d", amountCorrectAnswers];
+    NSString *incorrectText = [NSString stringWithFormat:@"Incorrect answers: %d", amountIncorrectAnwers];
+
+    [self.answer1Button setTitle:(correctText) forState:UIControlStateNormal];
+    [self.answer2Button setTitle:(incorrectText) forState:UIControlStateNormal];
+    
+    if (amountCorrectAnswers == 5){
+        self.questionLabel.text = @"Daamn, you got all the right answers";
+    } else if (amountCorrectAnswers == 4){
+        self.questionLabel.text = @"OOOh, soo close, maybe next time";
+    } else if (amountCorrectAnswers == 3){
+        self.questionLabel.text = @"I know you can increase your score";
+    } else if (amountCorrectAnswers == 2){
+        self.questionLabel.text = @"I think a four year old kid can do better than that";
+    } else if (amountCorrectAnswers == 1){
+        self.questionLabel.text = @"This is just embarrassing";
+    } else{
+        self.questionLabel.text =@"Just leave, and never return";
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

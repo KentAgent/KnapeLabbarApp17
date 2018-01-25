@@ -13,7 +13,6 @@
 		D24A837C2014C3870079ADF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A836A2014C3860079ADF3 /* main.m */; };
 		D24A837D2014C3870079ADF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24A836B2014C3860079ADF3 /* Assets.xcassets */; };
 		D24A837E2014C3870079ADF3 /* HemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A836D2014C3870079ADF3 /* HemViewController.m */; };
-		D24A837F2014C3870079ADF3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D24A836E2014C3870079ADF3 /* Info.plist */; };
 		D24A83822014C3870079ADF3 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83722014C3870079ADF3 /* AboutViewController.m */; };
 		D24A83832014C3870079ADF3 /* UnUsedFiles in Resources */ = {isa = PBXBuildFile; fileRef = D24A83732014C3870079ADF3 /* UnUsedFiles */; };
 		D24A83872014C4690079ADF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83852014C4680079ADF3 /* AppDelegate.m */; };
@@ -22,6 +21,10 @@
 		D24A83902014C7550079ADF3 /* SavedSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A838D2014C7550079ADF3 /* SavedSettings.m */; };
 		D24A83962014C7EE0079ADF3 /* GameSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83952014C7EE0079ADF3 /* GameSettingsViewController.m */; };
 		D24A839A2014CB250079ADF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24A83842014C4330079ADF3 /* Main.storyboard */; };
+		D24C574C2017A54300C7FEEF /* QuizGameHemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24C57432017A54300C7FEEF /* QuizGameHemViewController.m */; };
+		D24C574D2017A54300C7FEEF /* Questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = D24C57442017A54300C7FEEF /* Questions.plist */; };
+		D24C574F2017A54300C7FEEF /* QuizGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24C574A2017A54300C7FEEF /* QuizGameViewController.m */; };
+		D24C57752018832500C7FEEF /* QuizGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D24C57742018832500C7FEEF /* QuizGameModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,13 @@
 		D24A838D2014C7550079ADF3 /* SavedSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SavedSettings.m; sourceTree = "<group>"; };
 		D24A83942014C7ED0079ADF3 /* GameSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameSettingsViewController.h; sourceTree = "<group>"; };
 		D24A83952014C7EE0079ADF3 /* GameSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameSettingsViewController.m; sourceTree = "<group>"; };
+		D24C57432017A54300C7FEEF /* QuizGameHemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizGameHemViewController.m; sourceTree = "<group>"; };
+		D24C57442017A54300C7FEEF /* Questions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Questions.plist; sourceTree = "<group>"; };
+		D24C57472017A54300C7FEEF /* QuizGameHemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizGameHemViewController.h; sourceTree = "<group>"; };
+		D24C57482017A54300C7FEEF /* QuizGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizGameViewController.h; sourceTree = "<group>"; };
+		D24C574A2017A54300C7FEEF /* QuizGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizGameViewController.m; sourceTree = "<group>"; };
+		D24C57732018832500C7FEEF /* QuizGameModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizGameModel.h; sourceTree = "<group>"; };
+		D24C57742018832500C7FEEF /* QuizGameModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizGameModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +132,13 @@
 		D24A83982014C8610079ADF3 /* Labb2FIles */ = {
 			isa = PBXGroup;
 			children = (
+				D24C57442017A54300C7FEEF /* Questions.plist */,
+				D24C57472017A54300C7FEEF /* QuizGameHemViewController.h */,
+				D24C57432017A54300C7FEEF /* QuizGameHemViewController.m */,
+				D24C57482017A54300C7FEEF /* QuizGameViewController.h */,
+				D24C574A2017A54300C7FEEF /* QuizGameViewController.m */,
+				D24C57732018832500C7FEEF /* QuizGameModel.h */,
+				D24C57742018832500C7FEEF /* QuizGameModel.m */,
 			);
 			path = Labb2FIles;
 			sourceTree = "<group>";
@@ -184,7 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D24A837F2014C3870079ADF3 /* Info.plist in Resources */,
+				D24C574D2017A54300C7FEEF /* Questions.plist in Resources */,
 				D24A839A2014CB250079ADF3 /* Main.storyboard in Resources */,
 				D24A83832014C3870079ADF3 /* UnUsedFiles in Resources */,
 				D24A83782014C3870079ADF3 /* Base.lproj in Resources */,
@@ -201,12 +218,15 @@
 			files = (
 				D24A838F2014C7550079ADF3 /* GameViewController.m in Sources */,
 				D24A83962014C7EE0079ADF3 /* GameSettingsViewController.m in Sources */,
+				D24C574C2017A54300C7FEEF /* QuizGameHemViewController.m in Sources */,
 				D24A83822014C3870079ADF3 /* AboutViewController.m in Sources */,
+				D24C574F2017A54300C7FEEF /* QuizGameViewController.m in Sources */,
 				D24A837E2014C3870079ADF3 /* HemViewController.m in Sources */,
 				D24A83902014C7550079ADF3 /* SavedSettings.m in Sources */,
 				D24A83872014C4690079ADF3 /* AppDelegate.m in Sources */,
 				D24A837A2014C3870079ADF3 /* ChooseGameViewController.m in Sources */,
 				D24A837C2014C3870079ADF3 /* main.m in Sources */,
+				D24C57752018832500C7FEEF /* QuizGameModel.m in Sources */,
 				D24A837B2014C3870079ADF3 /* ViewController.m in Sources */,
 				D24A838E2014C7550079ADF3 /* SettingsViewController.m in Sources */,
 			);
@@ -263,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -312,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -325,7 +345,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8427K5Y5BA;
+				DEVELOPMENT_TEAM = 6B7PDU22U7;
 				INFOPLIST_FILE = KnapeLabbarApp17/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KK.KnapeLabbarApp17;
@@ -341,7 +361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8427K5Y5BA;
+				DEVELOPMENT_TEAM = 6B7PDU22U7;
 				INFOPLIST_FILE = KnapeLabbarApp17/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KK.KnapeLabbarApp17;

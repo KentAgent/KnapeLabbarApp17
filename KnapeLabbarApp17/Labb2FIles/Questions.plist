@@ -6,31 +6,31 @@
 	<array>
 		<dict>
 			<key>questionText</key>
-			<string>Vad heter du?</string>
+			<string>vilket är ett fatasidjur?</string>
 			<key>a1</key>
-			<string>kalle</string>
+			<string>noshörning</string>
 			<key>a2</key>
-			<string>koffe</string>
+			<string>katt</string>
 			<key>a3</key>
-			<string>lars</string>
+			<string>enhörning</string>
 			<key>a4</key>
-			<string>robert</string>
-			<key>correctAnswere</key>
-			<string>koffe</string>
+			<string>hund</string>
+			<key>correctAnswer</key>
+			<string>katt</string>
 		</dict>
 		<dict>
 			<key>questionText</key>
-			<string>Vad heter jag?</string>
+			<string>vilken är ingen färg?</string>
 			<key>a1</key>
-			<string>adam</string>
+			<string>röd</string>
 			<key>a2</key>
-			<string>per</string>
+			<string>blå</string>
 			<key>a3</key>
-			<string>nippe</string>
+			<string>gul</string>
 			<key>a4</key>
-			<string>mamma</string>
-			<key>correctAnswere</key>
-			<string>mamma</string>
+			<string>huy</string>
+			<key>correctAnswer</key>
+			<string>huy</string>
 		</dict>
 		<dict>
 			<key>questionText</key>
@@ -43,22 +43,22 @@
 			<string>pappa</string>
 			<key>a4</key>
 			<string>robert</string>
-			<key>correctAnswere</key>
-			<string>lars</string>
+			<key>correctAnswer</key>
+			<string>robert</string>
 		</dict>
 		<dict>
 			<key>questionText</key>
-			<string>Vad heter hon?</string>
+			<string>vilken stad bor jag i?</string>
 			<key>a1</key>
-			<string>kalle</string>
+			<string>Göteborg</string>
 			<key>a2</key>
-			<string>koffe</string>
+			<string>Stockholm</string>
 			<key>a3</key>
-			<string>ingmar</string>
+			<string>Malmö</string>
 			<key>a4</key>
-			<string>robert</string>
-			<key>correctAnswere</key>
-			<string>robert</string>
+			<string>Lund</string>
+			<key>correctAnswer</key>
+			<string>Göteborg</string>
 		</dict>
 	</array>
 </dict>
