@@ -36,4 +36,7 @@
 -(NSString*)getAnswer4{
     return [self.randomQuestion objectForKey:@"a4"];
 }
+
+
+
 @end

@@ -6,59 +6,157 @@
 	<array>
 		<dict>
 			<key>questionText</key>
-			<string>vilket är ett fatasidjur?</string>
+			<string>Vilken stad är USAs huvudstad?</string>
 			<key>a1</key>
-			<string>noshörning</string>
+			<string>Las Vegas</string>
 			<key>a2</key>
-			<string>katt</string>
+			<string>Washington</string>
 			<key>a3</key>
-			<string>enhörning</string>
+			<string>New York</string>
 			<key>a4</key>
-			<string>hund</string>
+			<string>Los Angeles</string>
 			<key>correctAnswer</key>
-			<string>katt</string>
+			<string>Washington</string>
 		</dict>
 		<dict>
 			<key>questionText</key>
-			<string>vilken är ingen färg?</string>
+			<string>Hur många oscars fick Tiatanic</string>
 			<key>a1</key>
-			<string>röd</string>
+			<string>9</string>
 			<key>a2</key>
-			<string>blå</string>
+			<string>10</string>
 			<key>a3</key>
-			<string>gul</string>
+			<string>7</string>
 			<key>a4</key>
-			<string>huy</string>
+			<string>11</string>
 			<key>correctAnswer</key>
-			<string>huy</string>
+			<string>11</string>
 		</dict>
 		<dict>
 			<key>questionText</key>
-			<string>Vad heter han?</string>
+			<string>Vem var USAs andra president</string>
 			<key>a1</key>
-			<string>lars</string>
+			<string>George Washington</string>
 			<key>a2</key>
-			<string>pippi</string>
+			<string>John Tyler</string>
 			<key>a3</key>
-			<string>pappa</string>
+			<string>Thomas Jeffersn</string>
 			<key>a4</key>
-			<string>robert</string>
+			<string>John Adams</string>
 			<key>correctAnswer</key>
-			<string>robert</string>
+			<string>John Adams</string>
 		</dict>
 		<dict>
 			<key>questionText</key>
-			<string>vilken stad bor jag i?</string>
+			<string>Vilket är Elvis Presley&apos;s mellannamn?</string>
 			<key>a1</key>
-			<string>Göteborg</string>
+			<string>Aaron</string>
 			<key>a2</key>
-			<string>Stockholm</string>
+			<string>Adams</string>
 			<key>a3</key>
-			<string>Malmö</string>
+			<string>James</string>
 			<key>a4</key>
-			<string>Lund</string>
+			<string>John</string>
 			<key>correctAnswer</key>
-			<string>Göteborg</string>
+			<string>Aaron</string>
+		</dict>
+		<dict>
+			<key>questionText</key>
+			<string>Vilket band var en gång känt som The Quarrymen?</string>
+			<key>a1</key>
+			<string>The Beatels</string>
+			<key>a2</key>
+			<string>AC/DC</string>
+			<key>a3</key>
+			<string>Nirvana</string>
+			<key>a4</key>
+			<string>The Rolling Stones</string>
+			<key>correctAnswer</key>
+			<string>The Beatels</string>
+		</dict>
+		<dict>
+			<key>questionText</key>
+			<string>Vilken färg har kobolt</string>
+			<key>a1</key>
+			<string>Rosa</string>
+			<key>a2</key>
+			<string>Blå</string>
+			<key>a3</key>
+			<string>Beige</string>
+			<key>a4</key>
+			<string>Svart</string>
+			<key>correctAnswer</key>
+			<string>Blå</string>
+		</dict>
+		<dict>
+			<key>questionText</key>
+			<string>Vad betyder det Arabiska ordet habibi? (حبيبي)</string>
+			<key>a1</key>
+			<string>Du är så fin</string>
+			<key>a2</key>
+			<string>Min kärlek</string>
+			<key>a3</key>
+			<string>Bästa vänn</string>
+			<key>a4</key>
+			<string>Fantastisk</string>
+			<key>correctAnswer</key>
+			<string>Min kärlek</string>
+		</dict>
+		<dict>
+			<key>questionText</key>
+			<string>Vart kommer drinken Mojito ursprungligen ifrån?</string>
+			<key>a1</key>
+			<string>Spanien</string>
+			<key>a2</key>
+			<string>Hawaii</string>
+			<key>a3</key>
+			<string>Cuba</string>
+			<key>a4</key>
+			<string>Indonsesien</string>
+			<key>correctAnswer</key>
+			<string>Cuba</string>
+		</dict>
+		<dict>
+			<key>questionText</key>
+			<string>Vilket land kommer ursprungligen pita-bröd ifrån?</string>
+			<key>a1</key>
+			<string>Finland</string>
+			<key>a2</key>
+			<string>Kurdistan</string>
+			<key>a3</key>
+			<string>Albanien</string>
+			<key>a4</key>
+			<string>Grekland</string>
+			<key>correctAnswer</key>
+			<string>Grekland</string>
+		</dict>
+		<dict>
+			<key>questionText</key>
+			<string>Vad är Kabbala?</string>
+			<key>a1</key>
+			<string>En övergiven stad i Amazonas regnskog</string>
+			<key>a2</key>
+			<string>Ett typ av arbetsredskap från stenåldern</string>
+			<key>a3</key>
+			<string>Ett religiöst filosofiskt system</string>
+			<key>a4</key>
+			<string>Världens mest välkända sekt</string>
+			<key>correctAnswer</key>
+			<string>Ett religiöst filosofiskt system</string>
+		</dict>
+		<dict>
+			<key>questionText</key>
+			<string>Vilket djur är Kannadas nationaldjur</string>
+			<key>a1</key>
+			<string>Nordamerikans brunbjörn</string>
+			<key>a2</key>
+			<string>Nordamerikans bäver</string>
+			<key>a3</key>
+			<string>Nordamerikans älg</string>
+			<key>a4</key>
+			<string>Nordamerikans örn</string>
+			<key>correctAnswer</key>
+			<string>Nordamerikans bäver</string>
 		</dict>
 	</array>
 </dict>
