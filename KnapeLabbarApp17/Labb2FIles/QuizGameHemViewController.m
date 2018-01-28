@@ -18,6 +18,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (IBAction)buttonStartDown:(id)sender {
+    self.playQuizButton.backgroundColor = [UIColor colorWithRed:0.208f green:0.675f blue:0.698f alpha:0.5f];
+}
+- (IBAction)buttonStartUp:(id)sender {
+    self.playQuizButton.backgroundColor = [UIColor colorWithRed:0.208f green:0.675f blue:0.698f alpha:1.0f];
+}
+- (IBAction)buttonStartDrag:(id)sender {
+    self.playQuizButton.backgroundColor = [UIColor colorWithRed:0.208f green:0.675f blue:0.698f alpha:1.0f];
+
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

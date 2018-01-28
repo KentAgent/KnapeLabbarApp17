@@ -35,73 +35,74 @@
 }
 
 -(void)startGame{
-    amountOfQuestions = -1;
-    amountCorrectAnswers = 0;
-    amountIncorrectAnwers = 0;
+    [self.quizGameModel resetQuestionNumbers];
     [self generateNewQuestion];
+    [self giveTopText];
 }
 
 -(void)generateNewQuestion{
-    amountOfQuestions++;
-    [self testText];
+    [self giveTopText];
     self.correctOrInctorrectLabel.hidden = YES;
-    if (amountOfQuestions < 5) {
+    if (self.quizGameModel.playAmountOfQuestions) {
         [self setTextGenNewQuestion];
     } else {
-        [self afterGame];
+        [self restoreAfterGame];
     }
 }
 
 - (IBAction)playAgain:(id)sender {
-    if (amountOfQuestions < 5) {
+    if (self.quizGameModel.playAmountOfQuestions) {
+        self.quizGameModel.amountOfQuestions--;
         [self generateNewQuestion];
+        [self resetColors];
     }else {
         [self startGame];
+        [self resetColors];
         self.answer3Button.hidden = NO;
         self.answer4Button.hidden = NO;
-        [self.anotherQuestionButton setTitle:(@"") forState:UIControlStateNormal];
+        self.topText.hidden = NO;
     }
 }
 
 - (IBAction)answere1Pressed:(id)sender {
     if ([self.quizGameModel.getAnswer1 isEqualToString:self.quizGameModel.getAnswerLabel]) {
         [self correct:YES];
-        amountCorrectAnswers++;
+        [self.quizGameModel correctAnswer];
     } else {
         [self correct:NO];
-        amountIncorrectAnwers++;
+        [self.quizGameModel incorrectAnswer];
     }
 }
 - (IBAction)answere2Pressed:(id)sender {
     if ([self.quizGameModel.getAnswer2 isEqualToString:self.quizGameModel.getAnswerLabel]) {
         [self correct:YES];
-        amountCorrectAnswers++;
+        [self.quizGameModel correctAnswer];
     } else {
         [self correct:NO];
-        amountIncorrectAnwers++;
+        [self.quizGameModel incorrectAnswer];
     }
 }
 - (IBAction)answere3Pressed:(id)sender {
     if ([self.quizGameModel.getAnswer3 isEqualToString:self.quizGameModel.getAnswerLabel]) {
         [self correct:YES];
-        amountCorrectAnswers++;
+        [self.quizGameModel correctAnswer];
     } else {
         [self correct:NO];
-        amountIncorrectAnwers++;
+        [self.quizGameModel incorrectAnswer];
     }
 }
 - (IBAction)answere4Pressed:(id)sender {
     if ([self.quizGameModel.getAnswer4 isEqualToString:self.quizGameModel.getAnswerLabel]) {
         [self correct:YES];
-        amountCorrectAnswers++;
+        [self.quizGameModel correctAnswer];
     } else {
         [self correct:NO];
-        amountIncorrectAnwers++;
+        [self.quizGameModel incorrectAnswer];
     }
 }
 
 -(void)setTextGenNewQuestion{
-    self.quizGameModel.setQuestions;
+    [self.quizGameModel setQuestions];
     self.anotherQuestionButton.enabled = NO;
     [self.anotherQuestionButton setTitle:(@"") forState:UIControlStateNormal];
     [self buttonsEnabled];
@@ -111,6 +112,28 @@
     [self.answer2Button setTitle:self.quizGameModel.getAnswer2 forState:UIControlStateNormal];
     [self.answer3Button setTitle:self.quizGameModel.getAnswer3 forState:UIControlStateNormal];
     [self.answer4Button setTitle:self.quizGameModel.getAnswer4 forState:UIControlStateNormal];
+}
+
+-(void) buttonsEnabled {
+    self.answer1Button.enabled = YES;
+    self.answer2Button.enabled = YES;
+    self.answer3Button.enabled = YES;
+    self.answer4Button.enabled = YES;
+}
+
+-(void) buttonsDisabled {
+    self.answer1Button.enabled = NO;
+    self.answer2Button.enabled = NO;
+    self.answer3Button.enabled = NO;
+    self.answer4Button.enabled = NO;
+}
+
+-(void)restoreAfterGame{
+    [self buttonsDisabled];
+    self.correctOrInctorrectLabel.hidden = YES;
+    self.answer3Button.hidden = YES;
+    self.answer4Button.hidden = YES;
+    [self afterGameTextChange];
 }
 
 -(void) correct:(BOOL) correct{
@@ -129,60 +152,68 @@
     }
 }
 
--(void) buttonsEnabled {
-    self.answer1Button.enabled = YES;
-    self.answer2Button.enabled = YES;
-    self.answer3Button.enabled = YES;
-    self.answer4Button.enabled = YES;
-}
-
--(void) buttonsDisabled {
-    self.answer1Button.enabled = NO;
-    self.answer2Button.enabled = NO;
-    self.answer3Button.enabled = NO;
-    self.answer4Button.enabled = NO;
-}
-
--(void)afterGame{
-    [self buttonsDisabled];
-    self.correctOrInctorrectLabel.hidden = YES;
-    self.answer3Button.hidden = YES;
-    self.answer4Button.hidden = YES;
-    [self afterGameTextChange];
-}
-
 -(void) afterGameTextChange{
-    NSString *correctText = [NSString stringWithFormat: @"Correct answers: %d", amountCorrectAnswers];
-    NSString *incorrectText = [NSString stringWithFormat:@"Incorrect answers: %d", amountIncorrectAnwers];
+    NSString *correctText = [NSString stringWithFormat: @"Correct answers: %d", self.quizGameModel.amountCorrectAnswers];
+    NSString *incorrectText = [NSString stringWithFormat:@"Incorrect answers: %d", self.quizGameModel.amountIncorrectAnwers];
     [self.anotherQuestionButton setTitle:(@"Play Again") forState:UIControlStateNormal];
     [self.answer1Button setTitle:(correctText) forState:UIControlStateNormal];
     [self.answer2Button setTitle:(incorrectText) forState:UIControlStateNormal];
-    
-    
-    if (amountCorrectAnswers == 5){
-        self.questionLabel.text = @"Daamn, you got all the right answers";
-    } else if (amountCorrectAnswers == 4){
-        self.questionLabel.text = @"OOOh, soo close, maybe next time";
-    } else if (amountCorrectAnswers == 3){
-        self.questionLabel.text = @"I know you can increase your score";
-    } else if (amountCorrectAnswers == 2){
-        self.questionLabel.text = @"I think a four year old kid can do better than that";
-    } else if (amountCorrectAnswers == 1){
-        self.questionLabel.text = @"This is just embarrassing";
-    } else{
-        self.questionLabel.text =@"Just leave, and never return";
-    }
+    self.questionLabel.text = [self.quizGameModel textForCorrect];
+    self.topText.hidden = YES;
+
 }
 
--(void)testText{
-    NSString *amount = [NSString stringWithFormat:@"questions: %d", amountOfQuestions];
-    [self.amountOfQuestionsLabel setText:(amount)];
-    
-    NSString *correct = [NSString stringWithFormat:@"correct: %d", amountCorrectAnswers];
-    [self.correct setText:(correct)];
-    
-    NSString *incorrect = [NSString stringWithFormat:@"incorrect: %d", amountIncorrectAnwers];
-    [self.incorrect setText:(incorrect)];
+-(void)giveTopText{
+    NSString *setTopText = [NSString stringWithFormat: @"Answer the following %d questions", self.quizGameModel.amountOfQuestions];
+    self.topText.text = setTopText;
+}
+
+/*
+ --------------------------------------------------------------
+                        BUTTON ANIMATIONS
+ --------------------------------------------------------------
+
+ */
+
+- (IBAction)a1Down:(id)sender {
+    self.answer1Button.backgroundColor = [self.quizGameModel buttonDownColor];
+}
+- (IBAction)a1Out:(id)sender {
+    self.answer1Button.backgroundColor = [self.quizGameModel buttonOutColor];
+}
+- (IBAction)a2Down:(id)sender {
+    self.answer2Button.backgroundColor = [self.quizGameModel buttonDownColor];
+}
+- (IBAction)a2Out:(id)sender {
+    self.answer2Button.backgroundColor = [self.quizGameModel buttonOutColor];
+}
+- (IBAction)a3Down:(id)sender {
+    self.answer3Button.backgroundColor = [self.quizGameModel buttonDownColor];
+}
+- (IBAction)a3Out:(id)sender {
+    self.answer3Button.backgroundColor = [self.quizGameModel buttonOutColor];
+}
+- (IBAction)a4Down:(id)sender {
+    self.answer4Button.backgroundColor = [self.quizGameModel buttonDownColor];
+}
+- (IBAction)a4Out:(id)sender {
+    self.answer4Button.backgroundColor = [self.quizGameModel buttonOutColor];
+}
+
+
+- (IBAction)newQDown:(id)sender {
+    self.anotherQuestionButton.backgroundColor = [self.quizGameModel buttonDownColor];
+}
+- (IBAction)newQOut:(id)sender {
+    self.anotherQuestionButton.backgroundColor = [self.quizGameModel buttonOutColor];
+}
+
+-(void)resetColors{
+    self.answer1Button.backgroundColor = [self.quizGameModel buttonUpColor];
+    self.answer2Button.backgroundColor = [self.quizGameModel buttonUpColor];
+    self.answer3Button.backgroundColor = [self.quizGameModel buttonUpColor];
+    self.answer4Button.backgroundColor = [self.quizGameModel buttonUpColor];
+    self.anotherQuestionButton.backgroundColor = [self.quizGameModel buttonUpColor];
 }
 
 - (void)didReceiveMemoryWarning {

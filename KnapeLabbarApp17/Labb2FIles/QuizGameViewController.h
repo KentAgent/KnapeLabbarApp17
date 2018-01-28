@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *amountOfQuestionsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *correct;
 
+@property (weak, nonatomic) IBOutlet UILabel *topText;
 //Labels
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *correctOrInctorrectLabel;
@@ -37,5 +38,14 @@
 //all answeres in questionList
 @property (nonatomic) NSString *answereList;
 @property (nonatomic) QuizGameModel* quizGameModel;
+
+
+
+
+
+
+
+
+
 
 @end

@@ -15,7 +15,6 @@
 		D24A83822014C3870079ADF3 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83722014C3870079ADF3 /* AboutViewController.m */; };
 		D24A83832014C3870079ADF3 /* UnUsedFiles in Resources */ = {isa = PBXBuildFile; fileRef = D24A83732014C3870079ADF3 /* UnUsedFiles */; };
 		D24A83872014C4690079ADF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83852014C4680079ADF3 /* AppDelegate.m */; };
-		D24A838E2014C7550079ADF3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83882014C7530079ADF3 /* SettingsViewController.m */; };
 		D24A838F2014C7550079ADF3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83892014C7530079ADF3 /* GameViewController.m */; };
 		D24A83902014C7550079ADF3 /* SavedSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A838D2014C7550079ADF3 /* SavedSettings.m */; };
 		D24A83962014C7EE0079ADF3 /* GameSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24A83952014C7EE0079ADF3 /* GameSettingsViewController.m */; };
@@ -24,6 +23,8 @@
 		D24C574D2017A54300C7FEEF /* Questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = D24C57442017A54300C7FEEF /* Questions.plist */; };
 		D24C574F2017A54300C7FEEF /* QuizGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24C574A2017A54300C7FEEF /* QuizGameViewController.m */; };
 		D24C57752018832500C7FEEF /* QuizGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D24C57742018832500C7FEEF /* QuizGameModel.m */; };
+		D255721F201B5A8400331A63 /* WigglySquares.m in Sources */ = {isa = PBXBuildFile; fileRef = D255721D201B5A8200331A63 /* WigglySquares.m */; };
+		D2557222201B67ED00331A63 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2557221201B67ED00331A63 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +43,8 @@
 		D24A83842014C4330079ADF3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D24A83852014C4680079ADF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D24A83862014C4680079ADF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D24A83882014C7530079ADF3 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D24A83892014C7530079ADF3 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		D24A838A2014C7540079ADF3 /* SavedSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SavedSettings.h; sourceTree = "<group>"; };
-		D24A838B2014C7540079ADF3 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		D24A838C2014C7550079ADF3 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		D24A838D2014C7550079ADF3 /* SavedSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SavedSettings.m; sourceTree = "<group>"; };
 		D24A83942014C7ED0079ADF3 /* GameSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameSettingsViewController.h; sourceTree = "<group>"; };
@@ -57,6 +56,10 @@
 		D24C574A2017A54300C7FEEF /* QuizGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizGameViewController.m; sourceTree = "<group>"; };
 		D24C57732018832500C7FEEF /* QuizGameModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizGameModel.h; sourceTree = "<group>"; };
 		D24C57742018832500C7FEEF /* QuizGameModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizGameModel.m; sourceTree = "<group>"; };
+		D255721D201B5A8200331A63 /* WigglySquares.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WigglySquares.m; sourceTree = "<group>"; };
+		D255721E201B5A8300331A63 /* WigglySquares.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WigglySquares.h; sourceTree = "<group>"; };
+		D2557220201B67EC00331A63 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		D2557221201B67ED00331A63 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 		D24A83982014C8610079ADF3 /* Labb2FIles */ = {
 			isa = PBXGroup;
 			children = (
+				D255721E201B5A8300331A63 /* WigglySquares.h */,
+				D255721D201B5A8200331A63 /* WigglySquares.m */,
 				D24C57442017A54300C7FEEF /* Questions.plist */,
 				D24C57472017A54300C7FEEF /* QuizGameHemViewController.h */,
 				D24C57432017A54300C7FEEF /* QuizGameHemViewController.m */,
@@ -130,8 +135,8 @@
 				D24A83892014C7530079ADF3 /* GameViewController.m */,
 				D24A838A2014C7540079ADF3 /* SavedSettings.h */,
 				D24A838D2014C7550079ADF3 /* SavedSettings.m */,
-				D24A83882014C7530079ADF3 /* SettingsViewController.m */,
-				D24A838B2014C7540079ADF3 /* SettingsViewController.h */,
+				D2557220201B67EC00331A63 /* SettingsViewController.h */,
+				D2557221201B67ED00331A63 /* SettingsViewController.m */,
 				D24A836C2014C3860079ADF3 /* AboutViewController.h */,
 				D24A83722014C3870079ADF3 /* AboutViewController.m */,
 			);
@@ -216,13 +221,14 @@
 				D24C574C2017A54300C7FEEF /* QuizGameHemViewController.m in Sources */,
 				D24A83822014C3870079ADF3 /* AboutViewController.m in Sources */,
 				D24C574F2017A54300C7FEEF /* QuizGameViewController.m in Sources */,
+				D255721F201B5A8400331A63 /* WigglySquares.m in Sources */,
 				D24A837E2014C3870079ADF3 /* HemViewController.m in Sources */,
 				D24A83902014C7550079ADF3 /* SavedSettings.m in Sources */,
 				D24A83872014C4690079ADF3 /* AppDelegate.m in Sources */,
 				D24A837A2014C3870079ADF3 /* ChooseGameViewController.m in Sources */,
 				D24A837C2014C3870079ADF3 /* main.m in Sources */,
 				D24C57752018832500C7FEEF /* QuizGameModel.m in Sources */,
-				D24A838E2014C7550079ADF3 /* SettingsViewController.m in Sources */,
+				D2557222201B67ED00331A63 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

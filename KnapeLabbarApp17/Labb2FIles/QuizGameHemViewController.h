@@ -10,7 +10,6 @@
 
 @interface QuizGameHemViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *playQuizButton;
-@property (weak, nonatomic) IBOutlet UIButton *settingsQuizButton;
-@property (weak, nonatomic) IBOutlet UIButton *highscoreQuizButton;
+
 
 @end
